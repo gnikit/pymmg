@@ -21,17 +21,27 @@ add_dependencies(mmg3d_exe mmg_src)
 add_executable(mmgs_exe IMPORTED GLOBAL)
 add_dependencies(mmgs_exe mmg_src)
 
+if(WIN32)
+  set(MMG2D_NAME ${CMAKE_BINARY_DIR}/bin/mmg2d.exe)
+  set(MMG3D_NAME ${CMAKE_BINARY_DIR}/bin/mmg3d.exe)
+  set(MMGS_NAME ${CMAKE_BINARY_DIR}/bin/mmgs.exe)
+else()
+  set(MMG2D_NAME ${CMAKE_BINARY_DIR}/bin/mmg2d_O3)
+  set(MMG3D_NAME ${CMAKE_BINARY_DIR}/bin/mmg3d_O3)
+  set(MMGS_NAME ${CMAKE_BINARY_DIR}/bin/mmgs_O3)
+endif()
+
 set_target_properties(mmg2d_exe
   PROPERTIES
-  IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/bin/mmg2d_O3
+  IMPORTED_LOCATION ${MMG2D_NAME}
 )
 set_target_properties(mmg3d_exe
   PROPERTIES
-  IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/bin/mmg3d_O3
+  IMPORTED_LOCATION ${MMG3D_NAME}
 )
 set_target_properties(mmgs_exe
   PROPERTIES
-  IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/bin/mmgs_O3
+  IMPORTED_LOCATION ${MMGS_NAME}
 )
 
 install(IMPORTED_RUNTIME_ARTIFACTS mmg2d_exe mmg3d_exe mmgs_exe
