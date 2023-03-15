@@ -30,7 +30,7 @@ setup(
     #     "Topic :: Software Development",
     #     "Topic :: Text Processing",
     # ],
-    cmake_args=(
-        ["-G", "Visual Studio 16 2019"] if sys.platform == "win32" else ["-G", "Ninja"]
-    ),
+    # cmake_args=(
+    #     ["-G", "Visual Studio 16 2019"] if sys.platform == "win32" else ["-G", "Ninja"]
+    # ),
 )
