@@ -1,19 +1,20 @@
 [build-system]
-requires = ["setuptools>=42", "scikit-build>=0.13", "cmake>=3.18", "ninja"]
+requires = [
+    "setuptools>=42",
+    "scikit-build>=0.13",
+    "cmake>=3.18",
+    "ninja",
+    "vtk",
+]
 build-backend = "setuptools.build_meta"
 
-# [tool.cibuildwheel.linux]
-# before-all = "yum -y install bison flex || apt-get -y install bison flex || apk add --upgrade bison flex"
-# test-command = "echo 'installed'"
+[tool.cibuildwheel]
+build = "cp311-*" # build wheels only for one Python version
+skip = "pp*"      # skip all pypy builds
 
-# # [[tool.cibuildwheel.overrides]]
-# # select = "*-manylinux_*"
-# # before-all = "apk-get install bison flex -y"
 
-# # [[tool.cibuildwheel.overrides]]
-# # select = "*-musllinux*"
-# # before-all = "apk add bison flex"
+[tool.cibuildwheel.macos]
+archs = ["x86_64", "arm64"]
 
-# [tool.cibuildwheel.macos]
-# before-all = "brew install bison flex make"
-# test-command = "echo 'installed'"
+[tool.cibuildwheel.windows]
+archs = ["auto64"]
