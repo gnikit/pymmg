@@ -4,7 +4,7 @@ requires = [
     "scikit-build>=0.13",
     "cmake>=3.18",
     "ninja",
-    "vtk",
+    # "vtk",
 ]
 build-backend = "setuptools.build_meta"
 
@@ -15,6 +15,10 @@ skip = "pp*"      # skip all pypy builds
 
 [tool.cibuildwheel.macos]
 archs = ["x86_64", "arm64"]
+
+[tool.cibuildwheel.macos.environment]
+CC = "clang"
+CXX = "clang++"
 
 [tool.cibuildwheel.windows]
 archs = ["auto64"]
