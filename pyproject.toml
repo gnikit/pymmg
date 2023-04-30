@@ -8,6 +8,39 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
+[project]
+name = "pymmg"
+version = "0.1.0"
+license = { text = "LGPL-3.0-or-later" }
+authors = [{ name = "gnikit" }]
+requires-python = ">=3.7"
+# dependencies = ["meshio[all]"]  # FIXME: make all optional
+description = "Surface and volume mesh and remesh generators based on MMG library"
+readme = "README.md"
+keywords = ["mesh", "remesh", "mesh generation", "unstructured"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Utilities",
+]
+dynamic = ["entry-points"]
+
+[project.urls]
+Homepage = "https://www.mmgtools.org/"
+"Source Code" = "https://github.com/gnikit/pymmg"
+Bugs = "https://github.com/gnikit/pymmg/issues"
+Dicsussions = "https://forum.mmgtools.org/"
+
 [tool.cibuildwheel]
 build = "cp311-*" # build wheels only for one Python version
 skip = "pp*"      # skip all pypy builds
