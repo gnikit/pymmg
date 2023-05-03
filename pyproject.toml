@@ -14,7 +14,7 @@ version = "0.1.0"
 license = { text = "LGPL-3.0-or-later" }
 authors = [{ name = "gnikit" }]
 requires-python = ">=3.7"
-# dependencies = ["meshio[all]"]  # FIXME: make all optional
+dependencies = ["meshio[all]"] # FIXME: make all optional
 description = "Surface and volume mesh and remesh generators based on MMG library"
 readme = "README.md"
 keywords = ["mesh", "remesh", "mesh generation", "unstructured"]
