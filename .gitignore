@@ -2,5 +2,6 @@ build/
 venv/
 dist/
 _skbuild/
+__pycache__/
 
 *.egg-info
