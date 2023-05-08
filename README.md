@@ -1,5 +1,7 @@
 # pymmg - Surface and volume remeshers
 
+[![Build](https://github.com/gnikit/pymmg/actions/workflows/main.yml/badge.svg)](https://github.com/gnikit/pymmg/actions/workflows/main.yml)
+
 Bringing [MMG](https://www.mmgtools.org/) surface and volume remeshers to Python.
 This package is a wrapper around the MMG tools
 
