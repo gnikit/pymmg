@@ -5,3 +5,6 @@ _skbuild/
 __pycache__/
 
 *.egg-info
+src/mmgs/mmgs_O3
+src/mmg2d/mmg2d_O3
+src/mmg3d/mmg3d_O3
