@@ -33,10 +33,17 @@ jobs:
           python -m pip install wheel>=0.40.0
           wheel tags --python-tag py3 --abi-tag none --remove ./wheelhouse/*.whl
 
+      - if: runner.os == 'Linux'
+        name: Build source distribution
+        run: |
+          pipx run build --sdist --outdir=wheelhouse
+
       - uses: actions/upload-artifact@v3
         with:
           name: python-wheels
-          path: ./wheelhouse/*.whl
+          path: |
+            ./wheelhouse/*.whl
+            ./wheelhouse/*.tar.gz
 
   publish:
     needs: [build_wheels]
