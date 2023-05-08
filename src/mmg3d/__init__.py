@@ -1,8 +1,10 @@
 import sys
+from pathlib import Path
+
 from general import intercept_io_and_run
 
 
 def main():
-    binary_name = "mmg3d"
+    binary = Path(__file__).parent / "mmg3d"
     args = sys.argv[1:]
-    intercept_io_and_run(binary_name, args)
+    intercept_io_and_run(binary, args)
