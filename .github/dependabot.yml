@@ -10,8 +10,21 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    # Group all CI dependencies into a single PR
+    groups:
+      ci:
+        patterns:
+          - "*"
 
   - package-ecosystem: "pip"
     directory: "/"
     schedule:
       interval: "weekly"
+    # Group all Python dependencies into a single PR
+    groups:
+      dev-dependencies:
+        patterns:
+          - "*"
+        update-types:
+        - "minor"
+        - "patch"
