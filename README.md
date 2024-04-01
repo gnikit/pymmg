@@ -48,7 +48,7 @@ This package is a wrapper around the MMG tools
 pip install pymmg
 ```
 
-> NOTE: you can the full-blown `pymmg` converter with `netcdf4` and `h5py` by doing:
+> NOTE: you can use the full-blown `pymmg` converter with `netcdf4` and `h5py` by doing:
 > `pip install pymmg[all]`
 
 ## Usage
