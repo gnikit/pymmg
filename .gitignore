@@ -4,7 +4,11 @@ dist/
 _skbuild/
 __pycache__/
 
+wheelhouse/
+MANIFEST.in
+
 *.egg-info
 src/mmgs/mmgs_O3
 src/mmg2d/mmg2d_O3
 src/mmg3d/mmg3d_O3
+src/**/_version.py

@@ -1,10 +1,15 @@
 [build-system]
-requires = ["setuptools>=42", "scikit-build>=0.13", "cmake>=3.18", "ninja"]
+requires = [
+    "setuptools>=42",
+    "scikit-build>=0.13",
+    "cmake>=3.18",
+    "ninja",
+    "setuptools_scm>=8",
+]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "pymmg"
-version = "0.1.0"
 license = { text = "LGPL-3.0-or-later" }
 authors = [{ name = "gnikit" }]
 requires-python = ">=3.7"
@@ -27,7 +32,7 @@ classifiers = [
     "Topic :: Scientific/Engineering",
     "Topic :: Utilities",
 ]
-dynamic = ["entry-points", "scripts"]
+dynamic = ["version", "entry-points", "scripts"]
 
 [project.urls]
 Homepage = "https://www.mmgtools.org/"
@@ -37,6 +42,9 @@ Dicsussions = "https://forum.mmgtools.org/"
 
 [project.optional-dependencies]
 all = ["meshio[all]"]
+
+[tool.setuptools_scm]
+write_to = "src/general/_version.py"
 
 [tool.cibuildwheel]
 build = "cp311-*" # build wheels only for one Python version
