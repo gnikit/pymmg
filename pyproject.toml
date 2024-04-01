@@ -27,7 +27,7 @@ classifiers = [
     "Topic :: Scientific/Engineering",
     "Topic :: Utilities",
 ]
-dynamic = ["entry-points"]
+dynamic = ["entry-points", "scripts"]
 
 [project.urls]
 Homepage = "https://www.mmgtools.org/"
