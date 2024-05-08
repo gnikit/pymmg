@@ -56,17 +56,17 @@ pip install pymmg
 ### Surface remeshing
 
 ```bash
-python -m mmgs input.mesh output.mesh
+mmgs input.mesh output.mesh
 ```
 
 ### Volume remeshing
 
 ```bash
-python -m mmg3d input.mesh output.mesh
+mmg3d input.mesh output.mesh
 ```
 
 ### 2D remeshing
 
 ```bash
-python -m mmg2d input.mesh output.mesh
+mmg2d input.mesh output.mesh
 ```

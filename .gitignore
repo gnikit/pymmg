@@ -1,5 +1,6 @@
 build/
 venv/
+.venv/
 dist/
 _skbuild/
 __pycache__/

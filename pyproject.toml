@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    "setuptools>=42",
+    "setuptools>=61",
     "scikit-build>=0.13",
     "cmake>=3.18",
     "ninja",
@@ -44,7 +44,7 @@ Dicsussions = "https://forum.mmgtools.org/"
 all = ["meshio[all]"]
 
 [tool.setuptools_scm]
-write_to = "src/general/_version.py"
+write_to = "src/pymmg/general/_version.py"
 
 [tool.cibuildwheel]
 build = "cp311-*" # build wheels only for one Python version
