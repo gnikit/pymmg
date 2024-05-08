@@ -14,9 +14,9 @@ setup(
     package_dir={"": "src"},
     entry_points={
         "console_scripts": [
-            "mmgs=mmgs:main",
-            "mmg2d=mmg2d:main",
-            "mmg3d=mmg3d:main",
+            "mmgs=pymmg.mmgs:main",
+            "mmg2d=pymmg.mmg2d:main",
+            "mmg3d=pymmg.mmg3d:main",
         ],
     },
     cmake_with_sdist=True,

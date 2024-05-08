@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 
-from general import intercept_io_and_run
+from pymmg.general import intercept_io_and_run
 
 
 def main():

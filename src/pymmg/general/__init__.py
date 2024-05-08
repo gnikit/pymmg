@@ -105,6 +105,7 @@ def get_medit_filename(arg_type: str, args: list[str]):
 
 
 def run_mmg(binary: Path, args: list[str]):
+    print("@@@Running:", binary, *args)
     if platform.system() == "Windows":
         binary = binary.with_suffix(".exe")
     else:
