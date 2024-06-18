@@ -3,7 +3,7 @@ import sys
 from setuptools import find_packages
 from skbuild import setup
 
-CMAKE_GENERATOR = "Ninja" if sys.platform != "win32" else "Visual Studio 16 2019"
+CMAKE_GENERATOR = "Ninja" if sys.platform != "win32" else "Visual Studio 17 2022"
 
 setup(
     name="pymmg",
