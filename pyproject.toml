@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    "setuptools>=61",
+    "setuptools>=80",
     "scikit-build>=0.13",
     "cmake>=3.18",
     "ninja",
