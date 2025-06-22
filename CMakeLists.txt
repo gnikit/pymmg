@@ -11,7 +11,7 @@ ExternalProject_Add(
   SOURCE_DIR "${CMAKE_BINARY_DIR}/mmg"
   GIT_REPOSITORY https://github.com/MmgTools/mmg
   GIT_TAG "v5.7.2"
-  CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR} -DDEF_MMG5_INT=int64_t
+  CMAKE_ARGS -DCMAKE_INSTALL_PREFIX=${CMAKE_BINARY_DIR} -DDEF_MMG5_INT=int64_t -DCMAKE_POLICY_VERSION_MINIMUM=3.5
 )
 
 # ExternalProject_Get_Property(mmg_src binary_dir)
