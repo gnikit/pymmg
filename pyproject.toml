@@ -1,6 +1,6 @@
 [build-system]
 requires = [
-    "setuptools>=61",
+    "setuptools>=80",
     "scikit-build>=0.13",
     "cmake>=3.18",
     "ninja",
@@ -10,7 +10,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pymmg"
-license = { text = "LGPL-3.0-or-later" }
+license = "LGPL-3.0-or-later"
 authors = [{ name = "gnikit" }]
 requires-python = ">=3.7"
 dependencies = ["meshio"]
@@ -20,7 +20,6 @@ keywords = ["mesh", "remesh", "mesh generation", "unstructured"]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -29,6 +28,8 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering",
     "Topic :: Utilities",
 ]
