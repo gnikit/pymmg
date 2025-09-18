@@ -53,7 +53,7 @@ skip = "pp*"      # skip all pypy builds
 
 
 [tool.cibuildwheel.macos]
-archs = ["arm64"]
+archs = ["auto"]
 
 [tool.cibuildwheel.macos.environment]
 CC = "clang"
