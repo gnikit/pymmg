@@ -2,7 +2,7 @@
 requires = [
     "setuptools>=80",
     "scikit-build>=0.13",
-    "cmake>=3.18",
+    "cmake>=4.1.0",
     "ninja",
     "setuptools_scm>=8",
 ]
