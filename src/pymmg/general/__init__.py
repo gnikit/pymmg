@@ -17,10 +17,11 @@ ACCEPTED_EXTENSIONS = [".mesh", ".meshb"]
 
 
 def intercept_io_and_run(binary_name: str, args: list[str]):
-    """Intercepts the arguments from the argument list and scans for
-    the explicit input and output options `in` and `out`. If the
-    input or output is not a .mesh or .mesh file, it will be
-    convert to and from .mesh to the requested file format.
+    """Intercepts the arguments from the argument list.
+
+    Intercepts and scans for the explicit input and output options
+    `in` and `out`. If the input or output is not a .mesh or .mesh file,
+    it will be convert to and from .mesh to the requested file format.
 
 
     Parameters
@@ -93,8 +94,8 @@ def get_medit_filename(arg_type: str, args: list[str]):
         return ""
     try:
         idx = args.index(arg_type) + 1
-    except ValueError:
-        raise ValueError(f"Option: {arg_type} must be followed by a filename.")
+    except ValueError as exc:
+        raise ValueError(f"Option: {arg_type} must be followed by a filename.") from exc
     filename = args[idx]
 
     # Conversion will be handled by MMG
@@ -111,4 +112,4 @@ def run_mmg(binary: Path, args: list[str]):
     else:
         binary = binary.parent / (binary.name + "_O3")
 
-    return subprocess.run([binary] + args)
+    return subprocess.run([binary] + args)  # noqa: S603
