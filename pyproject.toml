@@ -61,3 +61,6 @@ CXX = "clang++"
 
 [tool.cibuildwheel.windows]
 archs = ["auto64"]
+
+[tool.cibuildwheel.linux]
+archs = ["auto64", "auto32"]
