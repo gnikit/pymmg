@@ -58,7 +58,6 @@ archs = ["auto"]
 [tool.cibuildwheel.macos.environment]
 CC = "clang"
 CXX = "clang++"
-# MACOSX_DEPLOYMENT_TARGET = "11.0"
 
 [tool.cibuildwheel.windows]
 archs = ["auto64"]
