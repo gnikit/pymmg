@@ -2,7 +2,7 @@
 requires = [
     "setuptools>=80",
     "scikit-build>=0.13",
-    "cmake>=3.18",
+    "cmake>=4.1.0",
     "ninja",
     "setuptools_scm>=8",
 ]
@@ -53,7 +53,7 @@ skip = "pp*"      # skip all pypy builds
 
 
 [tool.cibuildwheel.macos]
-archs = ["x86_64", "arm64"]
+archs = ["auto"]
 
 [tool.cibuildwheel.macos.environment]
 CC = "clang"
@@ -61,3 +61,6 @@ CXX = "clang++"
 
 [tool.cibuildwheel.windows]
 archs = ["auto64"]
+
+[tool.cibuildwheel.linux]
+archs = ["auto64", "auto32"]
